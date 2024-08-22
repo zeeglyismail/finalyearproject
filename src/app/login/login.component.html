@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="row">
+    <h1 class="mb-5 text-center">Medical Pro Connect</h1>
+    <div class="form-group">
+      <div class="width300 mb-3">
+        <app-text-input
+          placeHolder="Email"
+          [text]="emailText"
+          type="email"
+          [showError]="submitted && emailText == ''"
+          [required]="true"
+          errorMessage="Email is required."
+          (textChange)="onEmailChange($event)"
+        ></app-text-input>
+      </div>
+      <div class="width300 mb-3">
+        <app-text-input
+          placeHolder="Password"
+          [text]="passwordText"
+          [type]="passwordInputType"
+          [showError]="submitted && passwordText == ''"
+          [required]="true"
+          errorMessage="Password is required."
+          (textChange)="onPasswordChange($event)"
+        ></app-text-input>
+        <div class="mt-2 mb-3">
+          <app-checkbox
+            text="Show Password"
+            (isCheckedChange)="showPassword($event)"
+          ></app-checkbox>
+        </div>
+      </div>
+      <div class="width300 mb-3 text-center">
+        <app-button
+          [buttonType]="buttonType"
+          (buttonClicked)="Submit()"
+          text="Submit"
+        ></app-button>
+      </div>
+    </div>
+  </div>
+</div>

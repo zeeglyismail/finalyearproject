@@ -1,0 +1,24 @@
+<div>
+  <input
+    [type]="type"
+    [readonly]="isReadonly"
+    [placeholder]="placeHolder"
+    class="form-control kaInputText"
+    [ngClass]="{ inputError: showError, textRight: isCurrency }"
+    [maxlength]="maxLength > 0 ? maxLength : ''"
+    (change)="textChanged($event)"
+    [(ngModel)]="text"
+    [attr.min]="type === 'number' ? minNumber : ''"
+    [attr.max]="type === 'number' ? (maxNumber ? maxNumber : '') : ''"
+    (paste)="(!disablePaste)"
+    #textInput
+  />
+  <label *ngIf="showError" class="errorText">
+    <ng-container *ngIf="showErrorIcon">
+      <i class="fas fa-exclamation-circle"></i>
+    </ng-container>
+    <span>
+      {{ errorMessage }}
+    </span>
+  </label>
+</div>

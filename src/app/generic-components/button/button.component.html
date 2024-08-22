@@ -1,0 +1,69 @@
+<button
+  *ngIf="isButton"
+  [style.margin-right]="needRightMargin ? marginRight : '0px'"
+  type="button"
+  class="kabtn kabtnPrimary"
+  [ngClass]="{
+    floatRight: alignRight,
+    activateGreyBackGround: needGrayBackGroundOnActivate
+  }"
+  (click)="onClick($event)"
+>
+  {{ text }}
+</button>
+
+<button
+  *ngIf="isSubmit"
+  [style.margin-right]="needRightMargin ? marginRight : '0px'"
+  type="submit"
+  class="kabtn kabtnPrimary"
+  [ngClass]="{
+    floatRight: alignRight,
+    activateGreyBackGround: needGrayBackGroundOnActivate
+  }"
+  (click)="onClick($event)"
+>
+  {{ text }}
+</button>
+
+<button
+  *ngIf="isReset"
+  [style.margin-right]="needRightMargin ? marginRight : '0px'"
+  type="reset"
+  class="kabtn kabtnPrimary"
+  [ngClass]="{
+    floatRight: alignRight,
+    activateGreyBackGround: needGrayBackGroundOnActivate
+  }"
+  (click)="onClick($event)"
+>
+  {{ text }}
+</button>
+
+<button
+  *ngIf="isGrid"
+  [style.margin-right]="needRightMargin ? marginRight : '0px'"
+  type="button"
+  class="kabtnGrid"
+  [ngClass]="{
+    floatRight: alignRight,
+    activateGreyBackGround: needGrayBackGroundOnActivate
+  }"
+  (click)="onClick($event)"
+>
+  {{ text }}
+</button>
+
+<button
+  *ngIf="isExport || isCancel"
+  [style.margin-right]="needRightMargin ? marginRight : '0px'"
+  type="button"
+  class="kabtn kabtnPrimaryAlt"
+  [ngClass]="{
+    floatRight: alignRight,
+    activateGreyBackGround: needGrayBackGroundOnActivate
+  }"
+  (click)="onClick($event)"
+>
+  {{ text }}
+</button>

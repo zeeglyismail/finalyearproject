@@ -1,0 +1,16 @@
+<div class="paddingTop2px">
+  <input
+    type="checkbox"
+    [name]="id"
+    [id]="id"
+    [(ngModel)]="isChecked"
+    (change)="onCheckChanged($event)"
+  />
+  <label
+    (click)="updateItem($event)"
+    [ngClass]="{ fontBold: boldText }"
+    class="checkboxTitle"
+  >
+    {{ text }}
+  </label>
+</div>

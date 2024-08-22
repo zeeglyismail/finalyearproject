@@ -1,0 +1,20 @@
+.kaInputText {
+  min-height: 10px;
+  border-radius: 25px;
+  padding-left: 15px;
+  border: 2px solid var(--athens-gray);
+  height: 35px !important;
+  box-shadow: none !important;
+}
+.kaInputText:hover {
+  border: 2px solid var(--bondi-blue);
+}
+.errorText {
+  color: var(--sunset-orange);
+}
+.inputError {
+  border: 2px solid var(--sunset-orange);
+}
+.kaInputText:read-only {
+  border-color: var(--athens-gray);
+}

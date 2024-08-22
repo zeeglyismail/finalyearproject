@@ -1,0 +1,56 @@
+.kabtn {
+  min-width: 100px !important;
+  --webkit-box-orient: horizontal;
+  --webkit-box-direction: horizontal;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  height: 35px;
+  border: none;
+  border-radius: 999999px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+.kabtn:disabled {
+  background-color: gray;
+  color: white;
+}
+.kabtn.kabtnPrimary {
+  color: white !important;
+  background-color: var(--bondi-blue);
+}
+.kabtn.kabtnPrimary:hover {
+  color: white !important;
+  background-color: var(--easterns-blue);
+}
+.kabtn.kabtnPrimaryAlt {
+  background-color: white !important;
+  color: var(--bondi-blue);
+  border: 1px solid var(--bondi-blue) !important;
+}
+.kabtn.kabtnPrimaryAlt:hover {
+  color: white !important;
+  background-color: var(--bondi-blue) !important;
+  border: none !important;
+}
+.floatRight {
+  float: right !important;
+}
+.activateGreyBackGround:active {
+  background-color: var(--athens-gray);
+}
+.kabtn.kabtnPrimary:active {
+  color: white !important;
+  background-color: var(--chathams-blue) !important;
+}
+.kabtn.kabtnPrimaryAlt:active {
+  color: white !important;
+  background-color: var(--chathams-blue) !important;
+  border: none !important;
+}
